@@ -6,9 +6,7 @@ import './style/App.css';
 import { getGeocoding } from "./api/geocoding";
 
 function App() {
-  const [latitude, setLatitude] = useState(48.85341);
-  const [longitude, setLongitude] = useState(2.3488);
-
+  
   const [cities, setCities] = useState([
     "Paris", "New York", "Tokyo", "London"
   ]);

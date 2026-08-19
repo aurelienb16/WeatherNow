@@ -19,7 +19,14 @@ function WeatherPanel({ city, latitude, longitude }) {
 
         loadWeatherData();
 
-    }, [latitude, longitude]);
+        const interval = setInterval(() => {
+            loadWeatherData();
+            console.log(`Data updated for ${city}`);
+        }, 30_000);
+        
+        return () => clearInterval(interval);
+
+    }, []);
 
     if (!weatherData) {
         return (
