@@ -51,18 +51,31 @@ function WeatherPanel({ latitude, longitude }) {
             <div className='content'>
 
                 <div className='item'>
-                    <div className='label'>Label:</div>
-                    <div className='data'>...</div>
+                    <div className='label'>Feels like:</div>
+                    <div className='data'>
+                        {weatherData.current.apparent_temperature.toFixed(1)}°
+                    </div>
                 </div>
 
                 <div className='item'>
-                    <div className='label'>Label:</div>
-                    <div className='data'>...</div>
+                    <div className='label'>Precipitation:</div>
+                    <div className='data'>
+                        {weatherData.current.precipitation} mm
+                    </div>
                 </div>
 
                 <div className='item'>
-                    <div className='label'>Label:</div>
-                    <div className='data'>...</div>
+                    <div className='label'>Wind Speed:</div>
+                    <div className='data'>
+                        {weatherData.current.wind_speed_10m.toFixed(0)} km/h
+                    </div>
+                </div>
+
+                <div className='item'>
+                    <div className='label'>Humidity:</div>
+                    <div className='data'>
+                        {weatherData.current.relative_humidity_2m}%
+                    </div>
                 </div>
 
             </div>
