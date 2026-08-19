@@ -1,0 +1,68 @@
+div.weather-panel {
+
+    width: 250px;
+    flex-shrink: 0;
+    flex-grow: 0;
+
+    border: solid;
+    border-radius: 12px;
+
+    padding: 15px;
+
+}
+
+/* Title (City name) */
+
+div.weather-panel div.header {
+
+    text-align: center;
+
+}
+
+div.weather-panel div.header h2 {
+
+    margin: 0;
+    font-size: 1.6em;
+
+}
+
+/* Temperature Container */
+
+div.weather-panel div.header div.temperature-container {
+
+    margin-inline: auto;
+
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
+}
+
+div.weather-panel div.header div.temperature-container div.temperature {
+    font-size: 2.5em;
+}
+
+div.weather-panel div.header div.temperature-container div.unit {
+    margin-top: 5px;
+
+    font-size: 1.5em;
+}
+
+/* Content */
+
+div.weather-panel div.content {
+
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 40px;
+
+}
+
+div.weather-panel div.content div.item {
+
+    display: flex;
+    gap: 10px;
+
+    margin-bottom: 10px;
+
+}
