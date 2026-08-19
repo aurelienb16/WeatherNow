@@ -6,7 +6,7 @@ import { getWeather } from "../api/weather";
 import "../style/WeatherPanel.css";
 
 
-function WeatherPanel({ latitude, longitude }) {
+function WeatherPanel({ city, latitude, longitude }) {
 
     const [weatherData, setData] = useState(null);
 
@@ -35,7 +35,7 @@ function WeatherPanel({ latitude, longitude }) {
 
             <div className='header'>
                 <div className='title'>
-                    <h2>Paris</h2>
+                    <h2>{city}</h2>
                 </div>
 
                 <div className="temperature-container">
@@ -60,7 +60,7 @@ function WeatherPanel({ latitude, longitude }) {
                 <div className='item'>
                     <div className='label'>Precipitation:</div>
                     <div className='data'>
-                        {weatherData.current.precipitation} mm
+                        {weatherData.current.precipitation.toFixed(1)} mm
                     </div>
                 </div>
 
