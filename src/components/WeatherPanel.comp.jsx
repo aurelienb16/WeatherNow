@@ -6,7 +6,7 @@ import { getWeather } from "../api/weather";
 import "../style/WeatherPanel.css";
 
 
-function WeatherPanel({ city, latitude, longitude }) {
+function WeatherPanel({ city, latitude, longitude, removeCity }) {
 
     const [weatherData, setData] = useState(null);
 
@@ -39,6 +39,13 @@ function WeatherPanel({ city, latitude, longitude }) {
     return (
 
         <div className="weather-panel">
+
+            <div className='deleteButtonContainer'>
+                <button className='deleteButton'
+                        onClick={() => removeCity(city)}>
+                            X
+                </button>
+            </div>
 
             <div className='header'>
                 <div className='title'>
@@ -81,7 +88,7 @@ function WeatherPanel({ city, latitude, longitude }) {
                 <div className='item'>
                     <div className='label'>Humidity:</div>
                     <div className='data'>
-                        {weatherData.current.relative_humidity_2m}%
+                        {weatherData.current.relative_humidity_2m.toFixed(0)}%
                     </div>
                 </div>
 

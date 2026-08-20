@@ -66,3 +66,42 @@ div.weather-panel div.content div.item {
     margin-bottom: 10px;
 
 }
+
+/* Delete button */
+
+div.weather-panel div.deleteButtonContainer {
+
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+div.weather-panel div.deleteButtonContainer button.deleteButton {
+
+    background: none;
+    border: none;
+    color: #F7FFF7;
+
+}
+
+div.weather-panel div.deleteButtonContainer button.deleteButton {
+
+    background: none;
+    border: none;
+    color: #F7FFF7;
+
+    transition: transform 0.2s ease;
+
+}
+
+div.weather-panel div.deleteButtonContainer button.deleteButton:hover {
+
+    transform: scale(1.5);
+
+}
+
+div.weather-panel div.deleteButtonContainer button.deleteButton:active {
+
+    transform: scale(0.6);
+
+}
