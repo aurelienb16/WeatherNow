@@ -5,18 +5,26 @@ export async function getWeather(latitude, longitude) {
     const params = {
         latitude: latitude,
         longitude: longitude,
-        current: ["temperature_2m", "precipitation", "wind_speed_10m", "relative_humidity_2m", "apparent_temperature"],
+        current: [
+            "temperature_2m",
+            "precipitation",
+            "wind_speed_10m",
+            "relative_humidity_2m",
+            "apparent_temperature"],
+        timezone: "auto",
     };
+
     const url = "https://api.open-meteo.com/v1/forecast";
     const responses = await fetchWeatherApi(url, params);
 
     const response = responses[0];
+    const current = response.current();
 
     // Attributes for timezone and location
     const utcOffsetSeconds = response.utcOffsetSeconds();
 
 
-    const current = response.current();
+
 
     const weatherData = {
         current: {

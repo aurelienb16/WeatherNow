@@ -33,6 +33,8 @@ Click on the `X` in the top right corner to remove a city from the list.
 - **Search & Delete**: the user can add and remove any city around the globe from the panel.
 - **Auto-Refresh**: the data is refreshed every 30 seconds to avoid deprecated data.
 
+Due to API limitations, the current weather is only updated every 15 minutes.
+
 #### Architecture Overview
 
 The app is built with React, powered by Vite.

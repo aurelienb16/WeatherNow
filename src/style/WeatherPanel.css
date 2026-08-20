@@ -19,6 +19,12 @@ div.weather-panel div.header {
 
 }
 
+div.weather-panel div.header div.time {
+
+    margin-top: 0;
+
+}
+
 div.weather-panel div.header h2 {
 
     margin: 0;

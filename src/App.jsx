@@ -64,7 +64,6 @@ function App() {
 
       <div className="app-main">
 
-
         {locations.map(location => (
           <WeatherPanel key={location.id} city={location.name}
             latitude={location.latitude} longitude={location.longitude}

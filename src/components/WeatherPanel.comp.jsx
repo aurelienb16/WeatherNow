@@ -21,7 +21,6 @@ function WeatherPanel({ city, latitude, longitude, removeCity }) {
 
         const interval = setInterval(() => {
             loadWeatherData();
-            console.log(`Data updated for ${city}`);
         }, 30_000);
         
         return () => clearInterval(interval);
@@ -48,6 +47,9 @@ function WeatherPanel({ city, latitude, longitude, removeCity }) {
             </div>
 
             <div className='header'>
+                <div className='time'>
+                    at {weatherData.current.time.toISOString().slice(11, 16)}
+                </div>
                 <div className='title'>
                     <h2>{city}</h2>
                 </div>
