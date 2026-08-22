@@ -1,6 +1,35 @@
 
 
+async function getUserCoordinates() {
+
+  const position = await new Promise((resolve, reject) => {
+    navigator.geolocation.getCurrentPosition(resolve, reject);
+  });
+
+  return {
+    latitude: position.coords.latitude,
+    longitude: position.coords.longitude,
+  };
+
+}
+
 export async function getGeocoding(city) {
+
+    if (city == "My Position") {
+        let coords;
+        try {
+            coords = await getUserCoordinates();
+        } catch (error) {
+            return null;
+        }
+
+        return {
+            "id": "MY_POSITION",
+            "name": "My Position",
+            "latitude": coords.latitude,
+            "longitude": coords.longitude,
+        }
+    }
 
     const response = await fetch(
         `https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(city)}&count=1&language=en&format=json`

@@ -31,6 +31,7 @@ Click on the `X` in the top right corner to remove a city from the list.
 
 - **UI**: the service is conveniently accessible from any web browser, with a minimalistic design to keep the interface smooth and easy to navigate. 
 - **Search & Delete**: the user can add and remove any city around the globe from the panel.
+- **GeoLocation**: by default, weather data for the user's location is displayed. If geolocation is not available or unauthorized, the feature is automatically silenced.
 - **Auto-Refresh**: the data is refreshed every 30 seconds to avoid deprecated data.
 
 Due to API limitations, the current weather is only updated every 15 minutes.

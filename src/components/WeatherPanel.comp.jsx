@@ -6,7 +6,7 @@ import { getWeather } from "../api/weather";
 import "../style/WeatherPanel.css";
 
 
-function WeatherPanel({ city, latitude, longitude, removeCity }) {
+function WeatherPanel({ id, city, latitude, longitude, removeCity }) {
 
     const [weatherData, setData] = useState(null);
 
@@ -37,7 +37,7 @@ function WeatherPanel({ city, latitude, longitude, removeCity }) {
 
     return (
 
-        <div className="weather-panel">
+        <div className="weather-panel" id={id}>
 
             <div className='deleteButtonContainer'>
                 <button className='deleteButton'

@@ -11,6 +11,12 @@ div.weather-panel {
 
 }
 
+div.weather-panel#MY_POSITION {
+
+    border: dotted;
+
+}
+
 /* Title (City name) */
 
 div.weather-panel div.header {

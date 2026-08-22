@@ -9,7 +9,7 @@ import CitySearchBar from "./components/CitySearchBar.comp";
 function App() {
 
   const [cities, setCities] = useState([
-    "Paris", "New York", "Tokyo", "London"
+    "My Position", "Paris", "New York", "Tokyo", "London"
   ]);
   const [locations, setLocations] = useState([]);
 
@@ -28,6 +28,9 @@ function App() {
       } catch (error) {
         console.error(error);
       }
+
+      // Removing locations that were unsuccessfully fetched
+      setLocations(locations => locations.filter(loc => loc !== null));
     }
 
     loadCities();
@@ -65,7 +68,7 @@ function App() {
       <div className="app-main">
 
         {locations.map(location => (
-          <WeatherPanel key={location.id} city={location.name}
+          <WeatherPanel key={location.id} id={location.id} city={location.name}
             latitude={location.latitude} longitude={location.longitude}
             removeCity={removeCity} />
         ))}
